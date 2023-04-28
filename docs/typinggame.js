@@ -215,11 +215,11 @@ class SceneGame extends window.Phaser.Scene {
     update(step, dt) {
         this.scoreText.setText(`score:${this.score}`);
         this.timeText.setText(`timer:${this.timedEvent.repeatCount}`);
-        this.wordSimplifiedText.setText(`${this.word.simplified}`);
+        this.wordSimplifiedText.setText(`${this.word.traditional}`);
         this.wordPinyinCurrentText.setText(`${this.word.pinyin_current}`);
         //this.wordPinyinText.setText(`${this.word.pinyin}`);
         this.wordPinyinToneText.setText(`ピンイン:${this.word.pinyin_tone}`);
-        this.wordDefinitionText.setText(`意味(英語)：${this.word.definition}`);
+        this.wordDefinitionText.setText(`英譯：${this.word.definition}`);
     }
 
     onClick(pointer, gameObject) {
