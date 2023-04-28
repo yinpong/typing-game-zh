@@ -32,7 +32,7 @@ class SceneTitle extends window.Phaser.Scene {
     }
 
     create() {
-        this.titleText = this.add.text(this.sys.game.config.width / 2, this.sys.game.config.height / 2, 'タイピングゲーム', { fontSize: '72px', padding: 10 });
+        this.titleText = this.add.text(this.sys.game.config.width / 2, this.sys.game.config.height / 2, '聖保羅漢語拼音練習', { fontSize: '72px', padding: 10 });
         this.titleText.setOrigin(0.5);
 
         this.add.image(this.sys.game.config.width / 2 + 50, 350, 'b_Play1')
@@ -126,7 +126,7 @@ class SceneGame extends window.Phaser.Scene {
             .then((json) => {
                 this.words = json;
                 this.selectWord(this.words);
-                this.wordSimplifiedText.setText(`${this.word.simplified}`);
+                this.wordSimplifiedText.setText(`${this.word.traditional}`);
                 this.wordPinyinCurrentText.setText(`${this.word.pinyin_current}`);
                 //this.wordPinyinText.setText(`${this.word.pinyin}`);
                 this.wordPinyinToneText.setText(`${this.word.pinyin_tone}`);
