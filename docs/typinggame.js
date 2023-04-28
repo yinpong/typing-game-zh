@@ -98,7 +98,7 @@ class SceneGame extends window.Phaser.Scene {
         userStatus.setScore(this.score);
         this.timer = 0;
         this.word = {
-            simplified: '',
+            traditional: '',
             pinyin_current: '',
             pinyin: '',
             pinyin_tone: '',
