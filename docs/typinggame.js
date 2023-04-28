@@ -218,7 +218,7 @@ class SceneGame extends window.Phaser.Scene {
         this.wordSimplifiedText.setText(`${this.word.traditional}`);
         this.wordPinyinCurrentText.setText(`${this.word.pinyin_current}`);
         //this.wordPinyinText.setText(`${this.word.pinyin}`);
-        this.wordPinyinToneText.setText(`ピンイン:${this.word.pinyin_tone}`);
+        this.wordPinyinToneText.setText(`拼音:${this.word.pinyin_tone}`);
         this.wordDefinitionText.setText(`英譯：${this.word.definition}`);
     }
 
