@@ -21,7 +21,7 @@ const makeSpeakerListOptions = (lang) => {
 // 音声再生
 const speech = () => {
   const voiceSelectValue = document.getElementById('voiceSelect').value
-  const elTextValue = document.getElementById('simplified').textContent
+  const elTextValue = document.getElementById('traditional').textContent
   const utterance = new window.SpeechSynthesisUtterance(elTextValue)
   if (voiceSelectValue) {
     utterance.voice = window.speechSynthesis.getVoices().filter((voice) => voice.name === voiceSelectValue)[0]
