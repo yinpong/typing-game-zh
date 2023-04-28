@@ -155,7 +155,7 @@ class SceneGame extends window.Phaser.Scene {
 
         this.input.on('gameobjectdown', this.onClick, this);
 
-        this.timedEvent = this.time.addEvent({ delay: 1000, callback: this.onTime, callbackScope: this, repeat: 60 });
+        this.timedEvent = this.time.addEvent({ delay: 1000, callback: this.onTime, callbackScope: this, repeat: 120 });
 
         this.input.keyboard.on('keydown', this.onKeydown, this);
 
@@ -198,7 +198,7 @@ class SceneGame extends window.Phaser.Scene {
     // 音声再生
     speech() {
         const voiceSelectValue = document.getElementById('voiceSelect').value;
-        const utterance = new window.SpeechSynthesisUtterance(this.word.simplified);
+        const utterance = new window.SpeechSynthesisUtterance(this.word.traditional);
         if (voiceSelectValue) {
             utterance.voice = window.speechSynthesis.getVoices().filter((voice) => voice.name === voiceSelectValue)[0];
             utterance.lang = 'zh-CN';
